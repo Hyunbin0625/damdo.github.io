@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('img/Haengdamdo_Main.jpg'); /* 이미지 경로 추가 */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0; /* 상단과 하단에 패딩 추가 */
+    text-align: center;
+    font-size: 1.4em;
+    width: 100%;
+    position: relative; /* 이미지가 헤더 안에 배치되도록 */
+}
+
+nav {
+    background-color: #006dda; /* 메뉴바 배경색 */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative; /* 헤더 아래로 위치 */
+    top: 0; /* 헤더 아래에 딱 맞게 위치 */
+    z-index: 1;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav a:hover {
+    background-color: #006dda; /* 밝은 파란색으로 변경 */
+    color: black;
+}
+
+section {
+    margin-top: 160px; /* 헤더와 메뉴 아래로 여백 설정 */
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #006dda;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 드롭다운 스타일 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content {
+    display: none; /* 기본적으로 서브 메뉴를 숨김 */
+    position: absolute;
+    background-color: #006dda; /* 서브 메뉴 배경색 */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #006dda; /* 서브 메뉴 항목 hover 시 색상 변경 */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* 드롭다운 항목이 표시되도록 */
+}
+
+.dropdown:hover .dropdown-toggle {
+    background-color: #006dda; /* 고객센터에 마우스 올렸을 때 색상 변경 */
+}

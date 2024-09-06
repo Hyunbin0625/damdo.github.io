@@ -1,0 +1,105 @@
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* directions-intro 클래스 스타일 */
+.directions-intro {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.directions-intro h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.directions-intro p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* directions-contact 섹션: Flexbox 사용하여 정보와 지도를 나란히 배치 */
+.directions-contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* contact-info 텍스트 정렬 및 배치 조정 */
+.contact-info {
+    flex: 1;
+    margin-right: 10px;
+    max-width: 50%;
+}
+
+.directions-contact h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.directions-contact p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* 지도 섹션 스타일 */
+.directions-map {
+    flex: 1;
+    max-width: 50%;
+}
+
+.directions-map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #006dda;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 미디어 쿼리: 모바일 대응 */
+@media screen and (max-width: 768px) {
+    .directions-contact {
+        flex-direction: column;
+    }
+
+    .contact-info, .directions-map {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .directions-map iframe {
+        height: 300px;
+    }
+}
