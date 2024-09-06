@@ -10,7 +10,7 @@ header {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 80px 0; /* 상단과 하단에 패딩 추가 */
+    padding: 100px 0; /* 상단과 하단에 패딩 추가 */
     text-align: center;
     font-size: 1.4em;
     width: 100%;
@@ -93,7 +93,8 @@ footer p {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
+    text-align: center; /* 가운데 정렬 */
+    white-space: nowrap; /* 항목들이 한 줄에 가로로 나열되게 설정 */
 }
 
 .dropdown-content a:hover {
@@ -101,7 +102,7 @@ footer p {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block; /* 드롭다운 항목이 표시되도록 */
+    display: flex; /* 드롭다운 항목이 표시되도록 */
 }
 
 .dropdown:hover .dropdown-toggle {
