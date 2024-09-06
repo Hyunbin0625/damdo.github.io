@@ -18,15 +18,15 @@ header {
 }
 
 nav {
-    background-color: #006dda; /* 메뉴바 배경색 */
+    background-color: rgba(0, 0, 0, 0.5); /* 투명한 메뉴바 */
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    position: relative; /* 헤더 아래로 위치 */
-    top: 0; /* 헤더 아래에 딱 맞게 위치 */
-    z-index: 1;
+    position: fixed; /* 상단에 고정 */
+    top: 0; /* 최상단에 위치 */
+    z-index: 1000; /* 항상 상단에 배치 */
 }
 
 nav a {
@@ -38,8 +38,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #006dda; /* 밝은 파란색으로 변경 */
-    color: black;
+    background-color: rgba(0, 0, 0, 0.7); /* hover 시 배경색 살짝 어두움 */
+    color: white;
 }
 
 section {
@@ -82,7 +82,7 @@ footer p {
 .dropdown-content {
     display: none; /* 기본적으로 서브 메뉴를 숨김 */
     position: absolute;
-    background-color: #006dda; /* 서브 메뉴 배경색 */
+    background-color: rgba(0, 0, 0, 0.5); /* 서브 메뉴도 투명하게 설정 */
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -97,7 +97,7 @@ footer p {
 }
 
 .dropdown-content a:hover {
-    background-color: #006dda; /* 서브 메뉴 항목 hover 시 색상 변경 */
+    background-color: rgba(0, 0, 0, 0.7); /* 서브 메뉴 항목 hover 시 색상 변경 */
 }
 
 .dropdown:hover .dropdown-content {
@@ -105,5 +105,5 @@ footer p {
 }
 
 .dropdown:hover .dropdown-toggle {
-    background-color: #006dda; /* 고객센터에 마우스 올렸을 때 색상 변경 */
+    background-color: rgba(0, 0, 0, 0.7); /* 메뉴에 마우스 올렸을 때 색상 변경 */
 }
