@@ -1,16 +1,7 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-image: url('img/Haengdamdo_Main.jpg'); /* 이미지 경로 추가 */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 80px 0; /* 상단과 하단에 패딩 추가 */
+/* 슬라이더 텍스트 스타일 */
+.slider-text {
+    margin-top: 70px; /* 텍스트 위쪽에 여백 추가 */
+    margin-bottom: 40px; /* 텍스트 아래쪽에 여백 추가 */
     text-align: center;
     color: black; /* 텍스트 색상을 검은색으로 변경 */
     font-size: 40px; /* 텍스트 크기 */
@@ -105,20 +96,25 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
     color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.dropdown-content a:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* 서브 메뉴 항목 hover 시 색상 변경 */
+/* 오버레이 텍스트 스타일 */
+.overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block; /* 드롭다운 항목이 표시되도록 */
+.overlay p {
+    font-size: 16px;
 }
 
-.dropdown:hover .dropdown-toggle {
-    background-color: rgba(0, 0, 0, 0.7); /* 메뉴에 마우스 올렸을 때 색상 변경 */
+/* 마우스 오버 시 오버레이 표시 */
+.menu-item:hover .overlay {
+    opacity: 1;
 }
