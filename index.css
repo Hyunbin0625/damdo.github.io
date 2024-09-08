@@ -10,91 +10,105 @@ header {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 100px 0; /* 상단과 하단에 패딩 추가 */
+    padding: 80px 0; /* 상단과 하단에 패딩 추가 */
     text-align: center;
-    font-size: 1.4em;
-    width: 100%;
-    position: relative; /* 이미지가 헤더 안에 배치되도록 */
+    color: black; /* 텍스트 색상을 검은색으로 변경 */
+    font-size: 40px; /* 텍스트 크기 */
+    font-weight: 500; /* 폰트 두께를 얇게 조정 (300으로 설정) */
+    z-index: 10;
 }
 
-nav {
-    background-color: rgba(0, 0, 0, 0.5); /* 투명한 메뉴바 */
+/* 슬라이더 컨테이너 스타일 */
+.slider-container {
     width: 100%;
-    height: auto;
+    height: 500px;
+    overflow: hidden;
+    margin-top: 20px; /* 텍스트 아래에 슬라이더가 위치하도록 여백 추가 */
+}
+
+/* 슬라이더 이미지 설정 */
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 500px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지가 잘리지 않게 설정 */
+}
+
+
+/* 메뉴 텍스트 스타일 */
+.menu-text {
+    margin-top: 70px; /* 텍스트 위쪽에 여백 추가 */
+    margin-bottom: 40px; /* 텍스트 아래쪽에 여백 추가 */
+    text-align: center;
+    color: black; /* 텍스트 색상을 검은색으로 변경 */
+    font-size: 40px; /* 텍스트 크기 */
+    font-weight: 500; /* 폰트 두께를 얇게 조정 (300으로 설정) */
+    z-index: 10;
+}
+
+/* 메뉴 섹션 */
+.menu-section {
+    padding: 40px;
+    background-color: white;
+}
+
+.menu-section h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* 메뉴 아이템 컨테이너 */
+.menu-items {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
-    position: fixed; /* 상단에 고정 */
-    top: 0; /* 최상단에 위치 */
-    z-index: 1000; /* 항상 상단에 배치 */
+    gap: 30px;
 }
 
-nav a {
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-nav a:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* hover 시 배경색 살짝 어두움 */
-    color: white;
-}
-
-section {
-    margin-top: 160px; /* 헤더와 메뉴 아래로 여백 설정 */
-    padding: 20px;
-    background-color: white;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* 푸터 스타일 */
-footer {
-    background-color: #006dda;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-/* 드롭다운 스타일 */
-.dropdown {
+/* 개별 메뉴 아이템 스타일 */
+.menu-item {
     position: relative;
-    display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-toggle {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    display: block;
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-.dropdown-content {
-    display: none; /* 기본적으로 서브 메뉴를 숨김 */
+/* 이미지 오버레이 효과 */
+.menu-item:hover img {
+    transform: scale(1.1); /* 마우스를 올렸을 때 이미지 확대 */
+}
+
+/* 오버레이 텍스트 */
+.overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5); /* 서브 메뉴도 투명하게 설정 */
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: center; /* 가운데 정렬 */
-    white-space: nowrap; /* 항목들이 한 줄에 가로로 나열되게 설정 */
+    text-align: left;
 }
 
 .dropdown-content a:hover {
@@ -102,7 +116,7 @@ footer p {
 }
 
 .dropdown:hover .dropdown-content {
-    display: flex; /* 드롭다운 항목이 표시되도록 */
+    display: block; /* 드롭다운 항목이 표시되도록 */
 }
 
 .dropdown:hover .dropdown-toggle {
