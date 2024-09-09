@@ -80,7 +80,7 @@
     width: 90%;
     height: 90%;
     object-fit: contain; /* 이미지가 잘리지 않게 설정 */
-    object-position:                                                                                                                                                                                                                                                                                        ;
+    object-position: top;
     transition: transform 0.3s ease-in-out;
 }
 
