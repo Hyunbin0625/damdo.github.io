@@ -61,65 +61,64 @@
 .menu-items {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 35px;
 }
 
 /* 개별 메뉴 아이템 스타일 */
 .menu-item {
     position: relative;
-    width: 300px; /* 메뉴 아이템 크기 조정 */
-    height: 350px; /* 메뉴 아이템 크기 조정 */
+    width: 250px;
+    height: 300px; /* 높이 조정 */
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    background-color: rgba(128, 128, 128, 0.1); /* 기본 회색 배경 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수직 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
 }
 
 /* 이미지와 텍스트 */
 .menu-item img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: contain; /* 이미지가 잘리지 않게 설정 */
     object-position: top;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* 텍스트와 이미지 사이 여백 */
 }
 
 /* 오버레이 텍스트 항상 표시되도록 설정 */
 .overlay {
     position: absolute;
-    bottom: 0;
+    bottom: 20px; /* 하단에 위치하도록 조정 */
     left: 0;
     width: 100%;
-
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 24px; /* 텍스트 크기 더 크게 설정 */
-    z-index: 2; /* 텍스트를 이미지 위로 */
-    opacity: 1; /* 텍스트 항상 표시 */
+    color: rgb(0, 0, 0);
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-size: 24px;
+    padding: 10px;
+    z-index: 2;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* 오버레이 텍스트 스타일 */
 .overlay h3 {
     font-size: 32px; /* 제목 크기 더 크게 조정 */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .overlay p {
-    font-size: 20px; /* 설명 텍스트 크기 더 크게 조정 */
+    font-size: 18px; /* 설명 텍스트 크기 더 크게 조정 */
 }
 
 /* 이미지 오버레이 효과 */
 .menu-item:hover img {
-    transform: scale(1.1); /* 마우스를 올렸을 때 이미지 확대 */
+    transform: scale(1.02); /* 마우스를 올렸을 때 이미지 확대 */
+    background-color: rgba(255, 255, 255, 0.9); /* 배경색 흰색으로 변경 */
+    box-shadow: 0 0px 4px rgb(0, 109, 218, 1);
 }
 
 /* 마우스 오버 시 배경색을 흰색으로 변경하고, 텍스트는 검은색으로 */
 .menu-item:hover .overlay {
-    background-color: rgba(255, 255, 255, 0.9); /* 배경색 흰색으로 변경 */
     color: black; /* 텍스트 색상을 검은색으로 변경 */
 }

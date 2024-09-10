@@ -10,7 +10,7 @@ header {
     background-size: cover;
     background-position: bottom;
     color: white;
-    padding: 370px 0; /* 상단과 하단에 패딩 추가 */
+    padding: 300px 0; /* 상단과 하단에 패딩 추가 */
     text-align: center;
     font-size: 1.4em;
     width: 100%;
@@ -22,8 +22,8 @@ nav {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
+    justify-content: flex-start;    /* 메뉴를 왼쪽으로 정렬 */
+    padding: 5px 0;
     position: fixed; /* 상단에 고정 */
     top: 0; /* 최상단에 위치 */
     z-index: 1000; /* 항상 상단에 배치 */
@@ -32,7 +32,7 @@ nav {
 nav a {
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 1em;
 }
@@ -64,6 +64,25 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
+}
+
+/* "행담도" 텍스트 아이콘 스타일 */
+.menu-icon {
+    font-size: 30px; /* 아이콘처럼 보이도록 글자 크기 설정 */
+    font-weight: bold; /* 두껍게 설정 */
+    color: #344476; /* 텍스트 색상 */
+    margin-right: 40px; /* 오른쪽에 공간 추가 */
+    margin-left: 20px; /* 오른쪽에 공간 추가 */
+    padding: 5px 10px; /* 적절한 패딩 추가 */
+    text-transform: uppercase; /* 모든 텍스트 대문자로 설정 */
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* 마우스 오버 시 텍스트 아이콘 색상 변경 */
+.menu-icon:hover {
+    color: #262b3c; /* 마우스를 올렸을 때 색상 변경 */
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 /* 드롭다운 스타일 */
