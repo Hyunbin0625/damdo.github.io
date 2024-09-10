@@ -81,7 +81,7 @@ footer p {
 
 /* 마우스 오버 시 텍스트 아이콘 색상 변경 */
 .menu-icon:hover {
-    color: #262b3c; /* 마우스를 올렸을 때 색상 변경 */
+    color: #344476; /* 마우스를 올렸을 때 색상 변경 */
     background-color: rgba(0, 0, 0, 0.0);
 }
 
