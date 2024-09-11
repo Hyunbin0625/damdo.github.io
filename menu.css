@@ -70,7 +70,7 @@ footer p {
 .menu-icon {
     font-size: 30px; /* 아이콘처럼 보이도록 글자 크기 설정 */
     font-weight: bold; /* 두껍게 설정 */
-    color: #344476; /* 텍스트 색상 */
+    color: #001f7e; /* 텍스트 색상 */
     margin-right: 40px; /* 오른쪽에 공간 추가 */
     margin-left: 20px; /* 오른쪽에 공간 추가 */
     padding: 5px 10px; /* 적절한 패딩 추가 */
@@ -81,7 +81,7 @@ footer p {
 
 /* 마우스 오버 시 텍스트 아이콘 색상 변경 */
 .menu-icon:hover {
-    color: #344476; /* 마우스를 올렸을 때 색상 변경 */
+    color: #001f7e; /* 마우스를 올렸을 때 색상 변경 */
     background-color: rgba(0, 0, 0, 0.0);
 }
 
