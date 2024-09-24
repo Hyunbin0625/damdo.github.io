@@ -67,8 +67,8 @@
 /* 개별 메뉴 아이템 스타일 */
 .menu-item {
     position: relative;
-    width: 250px;
-    height: 300px; /* 높이 조정 */
+    width: 300px;
+    height: 380px; /* 높이 조정 */
     overflow: hidden;
     border-radius: 8px;
     display: flex;
